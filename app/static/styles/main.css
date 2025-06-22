@@ -100,7 +100,6 @@ body {
     display: flex;
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
-    max-width: 90vw;
     overflow-x: scroll;
     margin: 0;
     gap: 1rem;
@@ -136,6 +135,7 @@ but on small screens they should be separate */
 
 .content {
     padding-left: 2em;
+    padding-right: 2em;
 }
 
 .heading {
@@ -176,4 +176,13 @@ but on small screens they should be separate */
 #hobbies, #about {
     margin-top: 2rem;
     padding: 0 1rem;
+}
+
+.education-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-row img {
+    width: 100px;
 }
