@@ -141,3 +141,39 @@ but on small screens they should be separate */
 .heading {
     color: #1d539f    
 }
+
+.hobby-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.hobby {
+    flex: 1 1 30%;
+    max-width: 30%;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.hobby img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.hobby h2 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+/* Hobbies Section */
+#hobbies, #about {
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
