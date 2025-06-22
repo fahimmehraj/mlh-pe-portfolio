@@ -1,55 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta property="og:title" content="Personal Portfolio" />
-    <meta property="og:description" content="My Personal Portfolio" />
-    <meta property="og:url" content="{{ url }}" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta property="og:title" content="Personal Portfolio" />
+  <meta property="og:description" content="My Personal Portfolio" />
+  <meta property="og:url" content="{{ url }}" />
 
-    <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
-    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
-    <title>{{ title }}</title>
-  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <header class="nav-bar">
-      <div class="nav-content">
-        <a href="/">
-          <div class="nav-logo">
-            <img src="./static/img/logo.svg" />
+  <link lang="sass" rel="stylesheet" href="./static/styles/main.css" />
+  <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon" />
+  <title>{{ title }}</title>
+</head>
+
+<body>
+  <header class="nav-bar">
+    <div class="nav-content">
+      <a href="/">
+        <div class="nav-logo">
+          <img src="./static/img/logo.svg" />
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <div class="profile">
+
+    <div id="profile-picture" class="profile-picture">
+      <img src="./static/img/portrait.jpg" />
+    </div>
+    <h1>{{ title }}</h1>
+  </div>
+
+  <div class="content">
+    <div id="about">
+      <h1 class="heading">About</h1>
+      <p>Hello, I'm Fahim! I enjoy messing around with technology and building solutions to problems through CS.</p>
+      <p>
+        I'm a current first-year at NYU studying computer science. You can see my previous experiences and education
+        in detail on my resume.
+      </p>
+      <p>
+        If you'd like to get in touch or have any inquires you can reach out to me at
+        <a href="mailto:fahimhussain21@gmail.com">fahimhussain21@gmail.com</a>
+      </p>
+    </div>
+
+    <div id="experience">
+      <h1>Experience</h1>
+      <div class="experience-scroll-container">
+        {% for experience in experiences %}
+        <div class="experience-card">
+          <div>
+            <div class="experience-header">
+              <h2>
+                <span class="experience-role">{{ experience.role }}</span>
+                for
+                <a href="{{ experience.href }}" target="_blank">
+                  <span>{{ experience.organization }}</span>
+                </a>
+              </h2>
+              <p>
+                {{ experience.timeline }}
+              </p>
+            </div>
+            <ul>
+              {% for accomplishment in experience.accomplishments %}
+              <li>{{ accomplishment }}</li>
+              {% endfor %}
+            </ul>
           </div>
-        </a>
-      </div>
-    </header>
-
-    <div class="profile">
-
-      <div id="profile-picture" class="profile-picture">
-        <img src="./static/img/logo.jpg" />
-      </div>
-      <h1>{{ title }}</h1>
-    </div>
-
-    <div class="content">
-      <div id="about">
-        <h1 class="heading">About</h1>
-        <p>Hello, I'm Fahim! I enjoy messing around with technology and building solutions to problems through CS.</p>
-        <p>
-          I'm a current first-year at NYU studying computer science. You can see my previous experiences and education
-          in detail on my resume.
-        </p>
-        <p>
-          If you'd like to get in touch or have any inquires you can reach out to me at
-          <a href="mailto:fahimhussain21@gmail.com">fahimhussain21@gmail.com</a>
-        </p>
+        </div>
+        {% endfor %}
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
