@@ -95,3 +95,12 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
+
+
+.content {
+    padding-left: 2em;
+}
+
+.heading {
+    color: #1d539f    
+}
