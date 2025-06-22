@@ -133,3 +133,11 @@ but on small screens they should be separate */
 .experience-role {
     color: #1C539F;
 }
+
+.content {
+    padding-left: 2em;
+}
+
+.heading {
+    color: #1d539f    
+}
