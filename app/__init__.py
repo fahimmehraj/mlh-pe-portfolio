@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 
 from .experiences import experiences
+from .hobbies import hobby_list
 
 load_dotenv()
 app = Flask(__name__)
@@ -14,4 +15,4 @@ def index():
 
 @app.route('/hobbies')
 def hobbies():
-    return render_template('hobbies.html', title="Hobbies")
+    return render_template('hobbies.html', title="Hobbies", hobbies=hobby_list)
