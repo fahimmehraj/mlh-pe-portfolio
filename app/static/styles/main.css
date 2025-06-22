@@ -171,13 +171,6 @@ but on small screens they should be separate */
     font-size: 1.5rem;
 }
 
-
-/* Hobbies Section */
-#hobbies, #about {
-    margin-top: 2rem;
-    padding: 0 1rem;
-}
-
 .education-row {
     display: flex;
     justify-content: space-between;
