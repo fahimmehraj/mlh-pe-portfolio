@@ -21,7 +21,7 @@ body {
 }
 
 .nav-content .logo-touch-target {
-    display: inline-flex;
+    display: flex;
     height: 60%;
     width: 350px;
 }
@@ -34,7 +34,7 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .nav-logo img {
@@ -42,11 +42,18 @@ body {
 }
 
 .nav-content nav {
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 100%;
     text-align: right;
     padding-top: 0px;
     padding-right: 0px;
+    gap: 2em;
+}
+
+.nav-element {
+    text-decoration: underline;
+    color: white;
 }
 
 .profile {
@@ -169,13 +176,6 @@ but on small screens they should be separate */
     padding: 1rem;
     margin: 0;
     font-size: 1.5rem;
-}
-
-
-/* Hobbies Section */
-#hobbies, #about {
-    margin-top: 2rem;
-    padding: 0 1rem;
 }
 
 .education-row {
