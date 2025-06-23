@@ -21,26 +21,40 @@
 
 <body>
     <header class="nav-bar">
-        <div class="nav-content">
+        <div class="nav-logo">
             <a href="/">
-                <div class="nav-logo">
-                    <img src="./static/img/logo.svg" />
-                </div>
+                <img src="./static/img/logo.svg" />
             </a>
+        </div>
+        <div class="nav-content">
+            <nav>
+                <a href="/" class="nav-element">
+                    <h2>Home</h2>
+                </a>
+                {% for page in pages %}
+
+                <a href="/{{ page }}" class="nav-element">
+                    <h2>{{ page|title }}</h2>
+                </a>
+                {% endfor %}
+            </nav>
         </div>
     </header>
 
-    <div id="hobbies">
-        <h1>Hobbies</h1>
-        <div class="hobby-row">
-            {% for hobby in hobbies %}
-            <div class="hobby">
-                <img src="./static/img/{{ hobby.img_path }}">
-                <h2>{{ hobby.name }}</h2>
+    <div class="content">
+        <div id="hobbies">
+            <h1 class="heading">Hobbies</h1>
+            <div class="hobby-row">
+                {% for hobby in hobbies %}
+                <div class="hobby">
+                    <img src="./static/img/{{ hobby.img_path }}">
+                    <h2>{{ hobby.name }}</h2>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
+
 </body>
 
 </html>

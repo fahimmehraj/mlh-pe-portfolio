@@ -21,12 +21,23 @@
 
 <body>
   <header class="nav-bar">
-    <div class="nav-content">
+    <div class="nav-logo">
       <a href="/">
-        <div class="nav-logo">
-          <img src="./static/img/logo.svg" />
-        </div>
+        <img src="./static/img/logo.svg" />
       </a>
+    </div>
+    <div class="nav-content">
+      <nav>
+        <a href="/" class="nav-element">
+          <h2>Home</h2>
+        </a>
+        {% for page in pages %}
+
+        <a href="/{{ page }}" class="nav-element">
+          <h2>{{ page|title }}</h2>
+        </a>
+        {% endfor %}
+      </nav>
     </div>
   </header>
 
@@ -53,7 +64,7 @@
     </div>
 
     <div id="experience">
-      <h1>Experience</h1>
+      <h1 class="heading">Experience</h1>
       <div class="experience-scroll-container">
         {% for experience in experiences %}
         <div class="experience-card">
@@ -82,9 +93,10 @@
     </div>
 
     <div id="education">
-      <h2>Education</h2>
+      <h1 class="heading">Education</h1>
       <div class="education-row">
-        <p>I am currently pursuing a Bachelors in Computer Science from New York University with an expected graduation of 2028.</p>
+        <p>I am currently pursuing a Bachelors in Computer Science from New York University with an expected graduation
+          of 2028.</p>
         <img src="./static/img/nyu.png">
       </div>
     </div>
