@@ -162,6 +162,7 @@ but on small screens they should be separate */
     background: rgba(0, 0, 0, 0.05);
     border-radius: 0.75rem;
     overflow: hidden;
+    padding: 12px
 }
 
 .hobby img {
@@ -173,10 +174,10 @@ but on small screens they should be separate */
 }
 
 .hobby h2 {
-    padding: 1rem;
     margin: 0;
     font-size: 1.5rem;
 }
+
 
 .education-row {
     display: flex;
