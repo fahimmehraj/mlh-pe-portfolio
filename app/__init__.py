@@ -38,8 +38,9 @@ class TimelinePost(Model):
 
 
 # Only connect and create tables if not in testing mode
-mydb.connect()
-mydb.create_tables([TimelinePost])
+if os.getenv("TESTING") != "true":
+    mydb.connect()
+    mydb.create_tables([TimelinePost])
 
 pages = []
 print(os.getcwd())
